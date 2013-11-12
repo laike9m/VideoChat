@@ -83,7 +83,7 @@ elgg.userpicker.addUser = function(event, ui) {
 		li += '<button id="invite" float="left" height="10" width=100>invite</button>';
 		$('<li>').html(li).appendTo(users);
 		
-		if (typeof something != "undefined"){
+		if (typeof rand_num != "undefined"){
 			var redirect_url = "http://192.168.101.1/elgg/videochat/vc?r=" + rand_num;
 			var body = '<a href="' + redirect_url + '">请和我签订契约,加入加入视频聊天吧！</a>';
 			var msg_params = {
