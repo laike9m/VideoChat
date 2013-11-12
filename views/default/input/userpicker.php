@@ -19,7 +19,12 @@
  * name of members[] and a value of the GUID.
  */
 
-elgg_load_js('elgg.userpicker');
+//elgg_load_js('elgg.userpicker');
+
+$up = 'mod/VideoChat/js/ui.userpicker.js';
+elgg_register_js('userpicker', $up);
+elgg_load_js('userpicker');
+
 elgg_load_js('jquery.ui.autocomplete.html');
 
 function user_picker_add_user($user_id) {
