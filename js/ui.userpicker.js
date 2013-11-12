@@ -73,7 +73,7 @@ elgg.userpicker.init = function() {
  */
 elgg.userpicker.addUser = function(event, ui) {
 	var info = ui.item;
-
+	
 	// do not allow users to be added multiple times
 	if (!(info.guid in elgg.userpicker.userList)) {
 		elgg.userpicker.userList[info.guid] = true;
@@ -83,34 +83,37 @@ elgg.userpicker.addUser = function(event, ui) {
 		li += '<button id="invite" float="left" height="10" width=100>invite</button>';
 		$('<li>').html(li).appendTo(users);
 		
-		var redirect_url = "http://192.168.101.1/elgg/videochat/vc?r=" + rand_num;
-		var body = '<a href="' + redirect_url + '">请和我签订契约,加入加入视频聊天吧！</a>';
-		var msg_params = {
-			__elgg_ts:elgg.security.token.__elgg_ts,
-			__elgg_token:elgg.security.token.__elgg_token,
-			recipient_guid:40,
-			subject:'ee',
-			body: body,
-		};
-		
-		/*
-		document.getElementById('invite').addEventListener('click', 
-			function(){post_to_url('http://192.168.101.1/elgg/action/messages/send',msg_params)},
-			false
-		);
-		*/
-		
-		$('#invite').click(function(){
-    		$.ajax({
-        		url: 'http://192.168.101.1/elgg/action/messages/send',
-        		type: 'POST',
-        		data: msg_params,
-        		success: function(msg){
-                	alert('your msg has been sent');
-            	}
-    		})
-		});
-		
+		if (typeof something != "undefined"){
+			var redirect_url = "http://192.168.101.1/elgg/videochat/vc?r=" + rand_num;
+			var body = '<a href="' + redirect_url + '">请和我签订契约,加入加入视频聊天吧！</a>';
+			var msg_params = {
+				__elgg_ts:elgg.security.token.__elgg_ts,
+				__elgg_token:elgg.security.token.__elgg_token,
+				recipient_guid:40,
+				subject:'ee',
+				body: body,
+			};
+			
+			/*
+			document.getElementById('invite').addEventListener('click', 
+				function(){post_to_url('http://192.168.101.1/elgg/action/messages/send',msg_params)},
+				false
+			);
+			*/
+			
+			$('#invite').click(function(){
+	    		$.ajax({
+	        		url: 'http://192.168.101.1/elgg/action/messages/send',
+	        		type: 'POST',
+	        		data: msg_params,
+	        		success: function(msg){
+	                	alert('your msg has been sent');
+	            	}
+	    		})
+			});
+		}
+		else
+			alert('do this at VideoChat page!');
 		
 	}
 
