@@ -84,7 +84,13 @@ elgg.userpicker.addUser = function(event, ui) {
 		$('<li>').html(li).appendTo(users);
 		
 		if (typeof rand_num != "undefined"){
-			var redirect_url = "http://192.168.101.1/elgg/videochat/vc?r=" + rand_num;
+			
+			if (document.URL.indexOf('192') == -1)
+				var base_url = "http://laike9m.webfactional.com/elgg/elgg/";
+			else
+				var base_url = "http://192.168.101.1/elgg/";
+				
+			var redirect_url = base_url + "videochat/vc?r=" + rand_num;
 			var body = '<a href="' + redirect_url + '">请和我签订契约,加入加入视频聊天吧！</a>';
 			var msg_params = {
 				__elgg_ts:elgg.security.token.__elgg_ts,
@@ -94,6 +100,7 @@ elgg.userpicker.addUser = function(event, ui) {
 				body: body,
 			};
 			
+
 			/*
 			document.getElementById('invite').addEventListener('click', 
 				function(){post_to_url('http://192.168.101.1/elgg/action/messages/send',msg_params)},
@@ -103,7 +110,7 @@ elgg.userpicker.addUser = function(event, ui) {
 			
 			$('#invite').click(function(){
 	    		$.ajax({
-	        		url: 'http://192.168.101.1/elgg/action/messages/send',
+	        		url: base_url + 'action/messages/send',
 	        		type: 'POST',
 	        		data: msg_params,
 	        		success: function(msg){
