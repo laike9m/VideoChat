@@ -95,7 +95,7 @@ elgg.userpicker.addUser = function(event, ui) {
 			var msg_params = {
 				__elgg_ts:elgg.security.token.__elgg_ts,
 				__elgg_token:elgg.security.token.__elgg_token,
-				recipient_guid:40,
+				recipient_guid: info.guid,
 				subject:'有朋友邀请您参与视频聊天',
 				body: body,
 			};
