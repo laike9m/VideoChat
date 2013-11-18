@@ -72,4 +72,4 @@ This is done by detecting the existense of that random nnumber since it only exi
             //add invite button click EventListener, see above code
 		}
 		else
-			alert('do this at VideoChat page!');
+			alert('do this on VideoChat page!');
