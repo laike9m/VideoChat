@@ -44,12 +44,12 @@
 你会发现，只要输入部分，符合的用户就列出来了，拼音也可以  
 接下来，点击`杨老师`
 
-<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/invite" />
+<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/invite.jpg" />
 
 一个包含着用户头像，用户名，以及一个`invite`按钮的结构就被添加到了右边栏  
 点击`invite`，给`杨老师`发送一个视频聊天邀请吧。邀请发送成功后，会看到提示
 
-<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/invite_success" />
+<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/invite_success.jpg" />
 
 接下来要做的就是等待对方接受邀请，一旦对方接受，就可以开始视频通话。
 
@@ -57,18 +57,18 @@
 下面我们站在`杨老师`的角度看看会发生什么。  
 之前另一位用户给`杨老师`发送了一个视频邀请，`杨老师`就会发现左上角有一条新信息：
 
-<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/new_msg.PNG" />
+<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/new_msg.png" />
 
 进入elgg的收件箱，发现有一个新消息。这正是之前另一个用户给`杨老师`发送的视频邀请：
 
-<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/new_msg.PNG" />
+<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/new_msg2.png" />
 
 点击进入这条消息，我们发现有一个链接`和我签订契约，加入视频聊天吧！`
 
-<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/new_msg3.PNG" />
+<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/new_msg3.png" />
 
 点击链接，就会自动跳转到VideoChat的插件页面，聊天开始！
 
-<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/chat.PNG" />
+<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/chat.png" />
 
 
