@@ -80,7 +80,7 @@ elgg.userpicker.addUser = function(event, ui) {
 		var users = $(this).siblings('.elgg-user-picker-list');
 		var li = '<input type="hidden" name="members[]" value="' + info.guid + '" />';
 		li += elgg.userpicker.viewUser(info);
-		li += '<button id="invite" float="left" height="10" width=100>invite</button>';
+		li += '<button id="invite" float="left" height=10 width=100>invite</button>';
 		$('<li>').html(li).appendTo(users);
 		
 		if (typeof rand_num != "undefined"){
@@ -93,10 +93,10 @@ elgg.userpicker.addUser = function(event, ui) {
 			var redirect_url = base_url + "videochat/vc?r=" + rand_num;
 			var body = '<a href="' + redirect_url + '">请和我签订契约,加入加入视频聊天吧！</a>';
 			var msg_params = {
-				__elgg_ts:elgg.security.token.__elgg_ts,
-				__elgg_token:elgg.security.token.__elgg_token,
+				__elgg_ts: elgg.security.token.__elgg_ts,
+				__elgg_token: elgg.security.token.__elgg_token,
 				recipient_guid: info.guid,
-				subject:'有朋友邀请您参与视频聊天',
+				subject: '有朋友邀请您参与视频聊天',
 				body: body,
 			};
 			
