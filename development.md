@@ -15,7 +15,7 @@ Though the appspot site works really well, it has some constraints. If two peopl
 
 Frankly speaking, although it's a plugin to implement video chatting, the most difficult part is not on videochat, but on how to invite your friends to talk to you.To do that, I use elgg built-in `User pickers` view.
 
-<img src="https://github.com/laike9m/VideoChat/raw/master/md_images/user_picker.jpg" />
+<img width=80% src="https://github.com/laike9m/VideoChat/raw/master/md_images/user_picker.jpg" />
 
 Next step is to find out how elgg actually sends a message, it's rather easy once you have the experience using Chrome Devtools or firebug.It turns out that a message is an HTTP POST request.
 
