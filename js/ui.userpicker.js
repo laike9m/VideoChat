@@ -120,7 +120,7 @@ elgg.userpicker.addUser = function(event, ui) {
 			});
 		}
 		else
-			alert('do this at VideoChat page!');
+			alert('do this on VideoChat page!');
 		
 	}
 
