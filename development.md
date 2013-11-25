@@ -7,7 +7,7 @@ If you have heard of WebRTC, you should be aware that modern web browsers have g
 
 WebRTC is a free, open project that enables web browsers with Real-Time Communications (RTC) capabilities via simple Javascript APIs.WebRTC allows web pages to access local multimedia devices like a webcam and microphone, and transmit these media streams to another WebRTC capable browser via a peer-to-peer network channel. These media streams can also be accompanied by a powerful data channel that lets developer exchange arbitrary data between two peers! Its mission is to enable rich, high quality, RTC applications to be developed in the browser via simple Javascript APIs and HTML5.
 
-Visit <a href='apprtc.appspot.com'>apprtc.appspot.com</a> (one of WebRTC's official example to show how it works), you'll find that it's just the application I use for my plugin. All I did is put the website into an `<iframe>`, and that's it, incrediblely simple but works flawlessly!
+Visit <a href='apprtc.appspot.com'>apprtc.appspot.com</a> (one of WebRTC's official examples to show how it works), you'll find that it's just the application I use for my plugin. All I did is putting the website into an `<iframe>`, and that's it, incrediblely simple but works flawlessly!
 
 View the <a href='https://github.com/laike9m/VideoChat/blob/master/views/default/videochat/greetings.php'>code</a> for more information.
 
@@ -64,7 +64,7 @@ This part send the HTTP POST request we mentioned above.Note that the content of
 1. I use `ajax` to prevent current page from reloading after sending a request. Why? Because two people can chat if and only if their `iframe` elements have the same `src` attribute (i.e. same room). If you reload, as mentioned before, a new random number will be generated thus making the inviter enter a different room.
 2. When sending HTTP request, `__elgg_ts` and `__elgg_token` are necessary parameters. This is a machanism elgg uses to validate message. Luckily these two variables are stored in global scope:  
 <img src="https://github.com/laike9m/VideoChat/raw/master/md_images/s.jpg" />  
-3. If you try to search friend in another page rather than the videochat Page, though you can still get a `invite` button, however when click, you will be alerted:  
+3. If you try to search friends in another page rather than the videochat Page, you still get a `invite` button, however when clicked, you will be alerted:  
 <img src="https://github.com/laike9m/VideoChat/raw/master/md_images/alert.jpg" />  
 This is done by detecting the existense of that random number since it only exists in the videochat page.
 		
