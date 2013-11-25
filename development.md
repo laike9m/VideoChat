@@ -1,7 +1,7 @@
 <b>VideoChat Plugin Development</b>
 ===
 
-Since this is a videochat plugin, the core part is of imeplementing video chatting between users. It's really simple actually.
+Since this is a videochat plugin, the core part is of course imeplementing video chatting between users. It's really simple actually.
 
 If you have heard of WebRTC, you should be aware that modern web browsers have great power. I'll make a brief introduction to WebRTC here, but if you want to truely understand it, further searching and reading is necessary.
 
@@ -22,7 +22,7 @@ Next step is to find out how elgg actually sends a message, it's rather easy onc
 e.g.  
 <img src="https://github.com/laike9m/VideoChat/raw/master/md_images/http.jpg" />
 
-Last thing is to implement your own sending/inviting machanism, making a redirection once your friends clicks the link in your msg.We'll let code do the talking:
+Last thing is to implement your own sending/inviting machanism, making a redirection once your friends clicks the link in your msg. I'll let code do the talking:
 
     li += '<button id="invite" float="left" height=10 width=100>invite</button>';
 	$('<li>').html(li).appendTo(users);
@@ -50,7 +50,7 @@ These two lines add the `invite` button.
 	    })
 	});
 
-This part send the HTTP POST request we mentioned above.Note that a content of a invite message contains a link, redirecting the invitee to the videochat page. The random number is also passed as a query string parameter, forcing the message invitee enter the same room as inviter. The below code shows how it is done.
+This part send the HTTP POST request we mentioned above.Note that the content of an invite message contains a link, redirecting the invitee to the videochat page. The random number is also passed as a query string parameter, forcing the message invitee enter the same room as inviter. The code below shows how it is done.
 
     if ( window.location.search != "" )  // has query string. 
 		rand_num = window.location.search.substr(3);  //?r=num
@@ -61,12 +61,12 @@ This part send the HTTP POST request we mentioned above.Note that a content of a
 
 ## some other things you should pay attention to
 
-1. Using `ajax` will prevent current page from reloading after sending a request. Why? Because two people can chat only if their `iframe` elements have the same `src` attribute (same room). If you reload, as mentioned before, a new random number will be generated thus making the inviter enter another room.
-2. When sending HTTP request, `__elgg_ts` and `__elgg_token` are necessary parameters. This is a machanism elgg uses to validate valid message. Luckily these two variables are stored in global scope:  
+1. I use `ajax` to prevent current page from reloading after sending a request. Why? Because two people can chat if and only if their `iframe` elements have the same `src` attribute (i.e. same room). If you reload, as mentioned before, a new random number will be generated thus making the inviter enter a different room.
+2. When sending HTTP request, `__elgg_ts` and `__elgg_token` are necessary parameters. This is a machanism elgg uses to validate message. Luckily these two variables are stored in global scope:  
 <img src="https://github.com/laike9m/VideoChat/raw/master/md_images/s.jpg" />  
-3. If you try to search friend in another page rather than the videochat Page, though you can still a `invite` button, but when clicking, you will be alerted:  
+3. If you try to search friend in another page rather than the videochat Page, though you can still get a `invite` button, however when click, you will be alerted:  
 <img src="https://github.com/laike9m/VideoChat/raw/master/md_images/alert.jpg" />  
-This is done by detecting the existense of that random nnumber since it only exists in the videochat page.
+This is done by detecting the existense of that random number since it only exists in the videochat page.
 		
 		if (typeof rand_num != "undefined"){
             //add invite button click EventListener, see above code
