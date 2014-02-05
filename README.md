@@ -1,6 +1,9 @@
 elgg_VideoChat
 ==============
 
-add a video chat plugin to elgg  
+a video chat plugin to elgg. 
 
-<a href="http://laike9m.webfactional.com/elgg/elgg/">website</a>
+See [introduction][intro] and [developement][dev] for more information.
+
+[intro]: https://github.com/laike9m/VideoChat/blob/master/introduction_zh.md
+[dev]: https://github.com/laike9m/VideoChat/blob/master/development.md
