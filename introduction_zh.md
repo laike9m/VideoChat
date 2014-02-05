@@ -26,8 +26,8 @@
 <img src="https://github.com/laike9m/VideoChat/raw/master/md_images/activate.jpg" />
 
 如果想体验插件的功能，可以直接访问我的网站：  
-<a href="laike9m.webfactional.com/elgg/elgg" >~~http://laike9m.webfactional.com/elgg/elgg~~（已关闭服务）</a>
-
+~~[http://laike9m.com/elgg/elgg][elgg]~~（已关闭服务）</a>
+[elgg]: #
 #### <b>发送聊天邀请</b>
 
 网站的界面没有在原有样式上作任何修改。把鼠标放到"More"上面，就可以看到新添加的VideoChat插件。
